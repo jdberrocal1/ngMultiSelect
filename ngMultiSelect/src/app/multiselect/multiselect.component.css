@@ -1,0 +1,47 @@
+ul.dropdownStatusFilter {
+    width: 100%;
+    margin-bottom: 20px;
+    overflow: hidden;
+    border-top: 1px solid #ccc;
+  }
+  
+  .dropdownStatusFilter > li.filterOption {
+    width: 50%;
+    line-height: 1.5em;
+    float: left;
+    display: inline;
+    padding-left: 10px;
+  }
+  
+  .dropdownStatusFilter .showAllOption {
+    padding: 0 0 0 10px;
+    color: #337ab7;
+    text-decoration: underline;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    cursor: pointer;
+  }
+  
+  .dropdownStatusFilter .showAllOption:hover {
+    color: #337ab7;
+    background-color: transparent;
+    background-image: none;
+    text-decoration: underline;
+  }
+  
+  .dropdownStatusFilter > .filterOption > a.clickableOption {
+    padding: 0;
+    cursor: pointer;
+  }
+  
+  .dropdownStatusFilter > .filterOption > a.clickableOption:hover {
+    background-color: transparent;
+    background-image: none;
+  }
+  
+  .searchOptionContainer {
+    width: 100%;
+    padding: 0 10px;
+  }
+  

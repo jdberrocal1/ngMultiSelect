@@ -1,0 +1,23 @@
+<div class="dropdown">
+  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+    {{selectedLabel}}
+    <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu dropdownStatusFilter" aria-labelledby="dropdownMenu1">
+    <li *ngIf="showAllOption">
+      <a class="showAllOption" (click)="clearStatusFilter()">Show All</a>
+    </li>
+    <li *ngIf="showSearchOption">
+      <div class="searchOptionContainer">
+        <input class="form-control" type="text" placeholder="Search" (keyup)="search($event.target.value)">
+      </div>
+    </li>
+    <li class="filterOption" *ngFor="let status of filteredOptions; let i = index" [attr.data-index]="i">
+      <a (click)="setStatusCheck(i, $event)" class="clickableOption">
+        <input type="checkbox" [(ngModel)]="status.isChecked" (ngModelChange)="modelChange()" [disabled]="status.isDisabled">
+        <img *ngIf="status.image && status.image !== ''" class="status-image" src="{{status.image}}"> 
+        {{status.name}}
+      </a>
+    </li>
+  </ul>
+</div>
